@@ -1,22 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-
-import { createStore, combineReducers } from 'redux';
-
-import { localeReducer as locale } from 'react-localize-redux';
-
+import { LocalizeProvider, localizeReducer } from 'react-localize-redux';
 import App from './components/App';
-import "../src/app.css";
+import "../src/app.css"
 
-
+let store;
 
 const AppFirst = props => (
-  <Provider>
+  <LocalizeProvider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>
+  </LocalizeProvider>
 );
 
 render(<AppFirst />, document.getElementById('root'));

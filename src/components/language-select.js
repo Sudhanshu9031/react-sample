@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class LanguageSelect extends React.Component {
     constructor(props) {
         super(props);
@@ -14,6 +15,7 @@ class LanguageSelect extends React.Component {
 
     changeData() {
         //alert(this.state.lang)
+        this.setState({})
     }
 
     render() {
@@ -24,6 +26,7 @@ class LanguageSelect extends React.Component {
                 <option value="en">English</option>
                 <option value="fr">French</option>
             </select>
+            <p>{msg}</p>
             </div>
         );
     }

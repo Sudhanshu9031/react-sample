@@ -1,0 +1,27 @@
+{
+  "title": [
+    "My Article title",
+    "My Article title FR",
+    "My Article title ES"
+  ],
+  "greeting": [
+    null,
+    "Bonjour ${name}!",
+    "Hola ${name}!"
+  ],
+  "homeLink": [
+    "Click ${ link } to go home.",
+    "Cliquez ${ link } pour rentrer à la page d'accueil",
+    "Haga clic ${ link } para ir a la página de inicio"
+  ],
+  "here": [
+    "here",
+    "ici",
+    "aquí"
+  ],
+  "Welcome": [
+    "Welcome to the Tornadoes Website!",
+    "Bonjour to the Tornadoes Website!",
+    "Hola to the Tornadoes Website!"
+  ]
+}
