@@ -3,12 +3,11 @@
 // solution would be more appropriate.
 const PlayerAPI = {
   players: [
-    { number: 1, name: "Ben Blocker", position: "G" },
-    { number: 2, name: "Dave Defender", position: "D" },
-    { number: 3, name: "Sam Sweeper", position: "D" },
-    { number: 4, name: "Matt Midfielder", position: "M" },
-    { number: 5, name: "William Winger", position: "M" },
-    { number: 6, name: "Fillipe Forward", position: "F" }
+    { number: 1, name: "Course1", position: "2 Hrs" },
+    { number: 2, name: "Course2", position: "4 Hrs" },
+    { number: 3, name: "Course3", position: "1 Hrs" },
+    { number: 4, name: "Course4", position: "5 Hrs" },
+    { number: 5, name: "Course5", position: "2 Hrs" }
   ],
   all: function() { return this.players},
   get: function(id) {

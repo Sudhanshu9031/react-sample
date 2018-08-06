@@ -20,8 +20,14 @@
     "aquí"
   ],
   "Welcome": [
-    "Welcome to the Tornadoes Website!",
-    "Bonjour to the Tornadoes Website!",
-    "Hola to the Tornadoes Website!"
-  ]
+    "Welcome to the Corporate Website!",
+    "Bonjour to the Corporate Website!",
+    "Hola to the Corporate Website!"
+  ],
+  "book1": ["Book1", "Book1-Fr", "Book1-SP"],
+  "book2": ["Book2", "Book2-Fr", "Book2-SP"],
+  "book3": ["Book3", "Book3-Fr", "Book3-SP"],
+  "home": ["Home", "Home-Fr", "Home-Sp"],
+  "roaster": ["Roaster", "Roaster-Fr", "Roaster-Sp"],
+  "schedule": ["Schedule", "Schedule-Fr", "Schedule-Sp"]
 }

@@ -1,13 +1,24 @@
 import React from 'react'
+import { withLocalize, Translate } from 'react-localize-redux';
+import internalFrTranslations from '../translations/internal-fr.json';
 
-const Schedule = () => (
-  <div>
+class Schedule extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props.addTranslationForLanguage(internalFrTranslations, "fr");
+  }
+  render(){
+    return(
+      <div>
     
-      <div>6/5 @ Evergreens</div>
-      <div>6/8 vs Kickers</div>
-      <div>6/14 @ United</div>
+      <div><Translate id="book1"></Translate></div>
+      <div><Translate id="book2"></Translate></div>
+      <div><Translate id="book3"></Translate></div>
     
   </div>
-)
+    )
+  }
+}
 
-export default Schedule
+
+export default withLocalize(Schedule)

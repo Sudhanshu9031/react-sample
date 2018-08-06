@@ -3,8 +3,13 @@ import { Switch, Route } from 'react-router-dom'
 import { renderToStaticMarkup } from 'react-dom/server';
 import ToggleButton from 'react-toggle-button'
 import { withLocalize, Translate } from 'react-localize-redux';
-import LanguageToggle from '../LanguageToggle';
-import globalTranslations from '../translations/global.json';
+
+// import LanguageToggle from '../LanguageToggle';
+
+// import globalTranslations from '../translations/global.json';
+import englishTranslations from '../translations/global-en.json';
+import frenchTranslations from '../translations/global-fr.json';
+import spanishTranslations from '../translations/global-sp.json';
 import Home from './Home'
 import Roster from './Roster'
 import Schedule from './Schedule'
@@ -25,9 +30,12 @@ class Main extends React.Component {
         { name: 'French', code: 'fr' }, 
         { name: 'Spanish', code: 'es' }
       ],
-      translation: globalTranslations,
+      translation: englishTranslations,
       options: { renderToStaticMarkup }
     });
+    this.props.addTranslationForLanguage(englishTranslations, "en");
+    this.props.addTranslationForLanguage(frenchTranslations, "fr");
+    this.props.addTranslationForLanguage(spanishTranslations, "es");
   }
 
   componentDidUpdate(prevProps) {
@@ -39,16 +47,22 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
-        <LanguageToggle />
-        <main>
+        <main role="main">
+          <div className="jumbotron">
+            <div className="container">
+              <h1 className="display-3">Hello, world!</h1>
+              <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+              <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+          </div>
+          <div className="container">
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/roster' component={Roster}/>
             <Route path='/schedule' component={Schedule}/>
           </Switch>
+          </div>
         </main>
-      </div>
     );
   }
 }

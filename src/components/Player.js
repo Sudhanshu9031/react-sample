@@ -14,8 +14,8 @@ const Player = (props) => {
   }
   return (
     <div>
-      <h1>{player.name} (#{player.number})</h1>
-      <h2>Position: {player.position}</h2>
+      <h1>{player.name}</h1>
+      <h2>Course Time: {player.position}</h2>
       <Link to='/roster'>Back</Link>
     </div>
   )
